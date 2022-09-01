@@ -16,8 +16,7 @@ public class Main {
       grafo.adicionarVertice("CR");
       grafo.adicionarVertice("PA");
 
-      System.out.println("O grafo G possui os seguintes vértices:");
-      System.out.println();
+      System.out.println("O grafo G possui os seguintes vértices:\n");
 
       for (Vertice vertice : grafo.getVertices()) {
          System.out.println("- Vértice " + vertice.getRotulo());

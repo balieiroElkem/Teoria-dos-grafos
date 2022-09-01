@@ -42,5 +42,4 @@ public class Grafo {
       return this.vertices;
    }
 
-   
 }
