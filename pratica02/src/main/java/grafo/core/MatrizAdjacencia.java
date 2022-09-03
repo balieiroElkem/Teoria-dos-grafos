@@ -44,7 +44,7 @@ public class MatrizAdjacencia {
 
       for (int j = 0; j < vertices.size(); j++) {
          if (matriz[linha][j] == 1) {
-            Vertice vertice = adjacencias.get(j);
+            Vertice vertice = vertices.get(j);
             adjacencias.add(vertice);
          }
       }
