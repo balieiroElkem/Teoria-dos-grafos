@@ -16,7 +16,7 @@ Para resolver o exercício, primeiro foi feito a etapa de criação do grafo, do
 
 #### Funcionamento do algoritmo da função __graphCheckTrail__:
 
-A função tem como parâmentro uma string que é a sequência de vértices do passeio especificado. Para cada par de letras, é verificado se existe na lista de vértices. Nesse caso, uma aresta vai ser o conjunto de __letra e letra+1__. É criado um mapeamento do tipo __HashMap<>()__ para verificar se a aresta já foi contabilizada. Caso essa a aresta exista no map, o programa set a variável __isTrail__ com __false__ e sai do loop para retornar a classe principal. Se a aresta não existe no map, ela é adicionada.
+A função tem como parâmentro uma string que é a sequência de vértices do passeio especificado. Para cada par de letras, é verificado se existe na lista de vértices. Nesse caso, uma aresta vai ser o conjunto de __letra e letra+1__. É criado um mapeamento do tipo __HashMap<>()__ para verificar se a aresta já foi contabilizada. Caso essa a aresta exista no map, o programa set a variável __isTrail__ com __false__ e sai do loop para retornar a classe principal. Se a aresta não existe no map, ela é adicionada. É verificado também se existe essa aresta. Por exemplo, AD não se ligam, logo eles são arestas. Essa verficação é feito no primeiro. E caso eles não sejam arestas, é exibido uma mensagem na tela e o valor __isTrail__ é setado como __false__.
 
 A função está no arquivo [Grafo.java](src/main/java/grafo/core/Grafo.java).
 

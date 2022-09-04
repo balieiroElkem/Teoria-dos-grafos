@@ -102,7 +102,11 @@ public class Grafo {
          this.existeVerticeOrThrow("" + c1);
          this.existeVerticeOrThrow("" + c2);
          
-         if (passos.containsKey("" + c1 + c2) || passos.containsKey("" + c2 + c1)) {
+         if (!this.getAdjacencias("" + c1).contains(this.getVertice("" + c2))) {
+            System.err.println("Não são arestas");
+            isTrail = false;
+            break;
+         } else if (passos.containsKey("" + c1 + c2) || passos.containsKey("" + c2 + c1)) {
             isTrail = false;
             break;
          } else {

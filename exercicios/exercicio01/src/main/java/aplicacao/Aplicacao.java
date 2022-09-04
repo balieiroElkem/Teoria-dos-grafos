@@ -37,7 +37,7 @@ public class Aplicacao {
 
 
       // Seção de testes
-      if (grafo.graphCheckTrail("FDEF")) {
+      if (grafo.graphCheckTrail("AD")) {
          System.out.println("É uma trilha");
       } else {
          System.out.println("Não é uma trilha");
