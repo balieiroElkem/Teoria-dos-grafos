@@ -90,4 +90,27 @@ public class Grafo {
          this.matrizAdjacencia = new MatrizAdjacencia(new ArrayList<Vertice>(this.vertices));
       }
    }
+
+
+   public boolean graphCheckTrail(String seq) {
+      Map<String, Integer> passos = new HashMap<>();
+      boolean isTrail = true;
+
+      for (int i = 0; i < seq.length()-1; ++i) {
+         char c1 = seq.charAt(i);
+         char c2 = seq.charAt(i+1);
+         this.existeVerticeOrThrow("" + c1);
+         this.existeVerticeOrThrow("" + c2);
+         
+         if (passos.containsKey("" + c1 + c2) || passos.containsKey("" + c2 + c1)) {
+            isTrail = false;
+            break;
+         } else {
+            passos.put("" + c1 + c2, 1);
+         }
+      }
+
+      
+      return isTrail;
+   }
 }

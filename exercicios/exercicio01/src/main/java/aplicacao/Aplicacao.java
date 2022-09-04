@@ -28,12 +28,20 @@ public class Aplicacao {
       grafo.conectarVertices("F", "G");
 
       System.out.println("Grau do vértice A: " + grafo.getVertice("A").getGrau());
-      System.out.println("Grau do vétice B: " + grafo.getVertice("B").getGrau());
-      System.out.println("Grau do vétice C: " + grafo.getVertice("C").getGrau());
-      System.out.println("Grau do vétice D: " + grafo.getVertice("D").getGrau());
-      System.out.println("Grau do vétice E: " + grafo.getVertice("E").getGrau());
-      System.out.println("Grau do vétice F: " + grafo.getVertice("F").getGrau());
-      System.out.println("Grau do vétice G: " + grafo.getVertice("G").getGrau());
+      System.out.println("Grau do vértice B: " + grafo.getVertice("B").getGrau());
+      System.out.println("Grau do vértice C: " + grafo.getVertice("C").getGrau());
+      System.out.println("Grau do vértice D: " + grafo.getVertice("D").getGrau());
+      System.out.println("Grau do vértice E: " + grafo.getVertice("E").getGrau());
+      System.out.println("Grau do vértice F: " + grafo.getVertice("F").getGrau());
+      System.out.println("Grau do vértice G: " + grafo.getVertice("G").getGrau());
+
+
+      // Seção de testes
+      if (grafo.graphCheckTrail("FDEF")) {
+         System.out.println("É uma trilha");
+      } else {
+         System.out.println("Não é uma trilha");
+      }
 
    }
 }
