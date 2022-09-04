@@ -20,6 +20,4 @@ A função tem como parâmentro uma string que é a sequência de vértices do p
 
 A função está no arquivo [Grafo.java](src/main/java/grafo/core/Grafo.java).
 
-![Grafo de exemplo](imagem/Grafo.png)
-
-Imagem dos exemplo de teste do grafo
+![Grafo](imagem/Grafo.png "Grafo de Exemplo")
