@@ -1,4 +1,4 @@
-# Apresentar uma função booleana GRAPHCheckTrail que verifica uma da sequência seq[0..k] de vétices de um grafo é uma trilha.
+# Apresentar uma função __booleana__ GRAPHCheckTrail que verifica uma da sequência seq[0..k] de vértices de um grafo é uma trilha.
 
 ## Integrantes: Elkem Balieiro, Daniel Lobato, Caio Jucá & Marcos Taylon.
 
@@ -6,7 +6,7 @@ Para resolver tal exercício, é essencial saber o que é uma trilha em grafo.
 
 Primeiramente tem-se que saber o que é uma aresta e um vétice. Um vértice (ou nó para os íntimos) é a parte mais básica de um grafo. Em um grafo desenhado, o vértice será a bolinha. Já as arestas são as uniões dos vértices. Em grafo desenhado, as arestas serão as linhas (ou caminhos) traçadas.
 
-Um *passeio* é um sequência alternada de vértices e arestas que começa e termina com vértices. Em um passeio pode haver repetições de vértices e arestas.
+Um __passeio__ é um sequência alternada de vértices e arestas que começa e termina com vértices. Em um passeio pode haver repetições de vértices e arestas.
 
 Diante disso, pode-se dizer que uma trilha (**trail**) é um passeio que não há repetições de **arestas**.
 
