@@ -1,5 +1,6 @@
 package src.main.java.grafo.search;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -45,5 +46,26 @@ public class BuscaEmLargura {
       }
 
       return caminho.gerar(origem, destino);
+   }
+
+
+   public List<String> buscar(Grafo grafo) {
+      Queue<String> roloDeBarbante = new LinkedList<>();
+      List<String> marcados = new ArrayList<>();
+
+      marcados.add(grafo.getVertices().get(0).getRotulo());
+      roloDeBarbante.add(grafo.getVertices().get(0).getRotulo());
+      while (roloDeBarbante.size() > 0) {
+         String verticeAtual = roloDeBarbante.poll();
+
+         for (Vertice u : grafo.getAdjacencias(verticeAtual)) {
+            if (!marcados.contains(u.getRotulo())) {
+               marcados.add(u.getRotulo());
+               roloDeBarbante.add(u.getRotulo());
+            }
+         }
+      }
+      
+      return marcados;
    }
 }

@@ -1,5 +1,6 @@
 package src.main.java.grafo.search;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Stack;
@@ -46,5 +47,29 @@ public class BuscaEmProfundidade {
       }
 
       return caminho.gerar(origem, destino);
+   }
+
+   
+   public List<String> buscar(Grafo grafo) {
+      Stack<String> roloDeBarbante = new Stack<>();
+      List<String> marcados = new ArrayList<>();
+      List<String> resultado = new ArrayList<>();
+
+      roloDeBarbante.add(grafo.getVertices().get(0).getRotulo());
+      marcados.add(grafo.getVertices().get(0).getRotulo());
+      
+      while (roloDeBarbante.size() > 0) {
+         String verticeAtual = roloDeBarbante.pop();
+         resultado.add(verticeAtual);
+
+         for (Vertice u : grafo.getAdjacencias(verticeAtual)) {
+            if (!marcados.contains(u.getRotulo())) {
+               marcados.add(u.getRotulo());
+               roloDeBarbante.add(u.getRotulo());
+            }
+         }
+      }
+
+      return resultado;
    }
 }
